@@ -1,0 +1,12 @@
+#linux things
+*.rpm
+
+#mac things
+.DS_Store
+
+# vagrant things
+.vagrant/
+.tmp/
+
+# ansible things
+vagrant_ansible_inventory_default

@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  roles:
+    - { role: dev-in-a-box, tags: [ 'dev' ]}
+  sudo: yes
