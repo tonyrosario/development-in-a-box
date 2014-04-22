@@ -3,6 +3,6 @@
 - hosts: all
   roles:
     - { role: dev-in-a-box, tags: [ 'dev' ]}
-    - { role: java, tags: [ 'java' ] }
+    - { role: tomcat, tags: [ 'tomcat' ] }
     - { role: nginx, tags: [ 'nginx' ] }
   sudo: yes

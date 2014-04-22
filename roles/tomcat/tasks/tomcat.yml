@@ -1,0 +1,13 @@
+---
+
+  - name: create tomcat dirs for app
+    file: dest={{ server_root }}/{{ app_name }} state=directory
+
+  - name: copy tomcat onto machine for app
+    unarchive: src=apache-tomcat-7.0.53.tar.gz dest={{ server_root }}/{{ app_name }}
+
+  - name: link for easy access
+    file: src={{ server_root }}/{{ app_name }}/apache-tomcat-7.0.53 dest={{ server_root }}/{{ app_name }}/tomcat state=link
+
+  - name: setup tomcat-users.xml file
+    template: src=tomcat-users.xml dest={{ server_root }}/{{ app_name }}/tomcat/conf/tomcat-users.xml

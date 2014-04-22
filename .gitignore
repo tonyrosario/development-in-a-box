@@ -1,5 +1,7 @@
 #linux things
 *.rpm
+*.gz
+*.tar
 
 #mac things
 .DS_Store

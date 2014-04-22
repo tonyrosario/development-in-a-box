@@ -1,0 +1,18 @@
+---
+
+  - name: create the tomcat user
+    user: name=tomcat system=true
+
+  - name: install tomcat for app
+    include: tomcat.yml app_name=app1
+
+  - name: install tomcat for app
+    include: tomcat.yml app_name=app2
+
+  - name: setup server.xml file
+    template: src=server.xml dest={{ server_root }}/{{ item.name }}/tomcat/conf/server.xml
+    with_items: app_data
+
+  - name: chown to tomcat user
+    file: dest={{ server_root }}/{{ item.name }}/apache-tomcat-7.0.53 owner=tomcat group=tomcat recurse=yes
+    with_items: app_data

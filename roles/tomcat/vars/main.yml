@@ -1,0 +1,12 @@
+---
+
+app_data:
+  - name: app1
+    tomcat:
+      server_port: 8005
+      http_port: 8080
+
+  - name: app2
+    tomcat:
+      server_port: 8006
+      http_port: 8081
