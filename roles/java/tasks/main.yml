@@ -1,5 +1,4 @@
 ---
-
   - name: download java
     copy: src=jdk-7u51-linux-x64.rpm dest=/tmp/jdk-7u51-linux-x64.rpm
 
